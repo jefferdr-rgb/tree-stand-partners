@@ -135,26 +135,26 @@ const Nav = ({ page, navigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav style={{ background: "#2c3528", padding: "0 24px", position: "sticky", top: 0, zIndex: 100, borderBottom: "3px solid #c49b2a44" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 80 }}>
-        <div onClick={() => navigate("home")} style={{ display: "flex", alignItems: "center", gap: 14, cursor: "pointer" }}>
+      <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 96 }}>
+        <div onClick={() => navigate("home")} style={{ display: "flex", alignItems: "center", gap: 16, cursor: "pointer" }}>
           <div style={{
-            width: 52, height: 52,
-            border: "2px solid #5c6854",
+            width: 68, height: 68,
+            border: "2.5px solid #5c6854",
             borderRadius: "50%",
             display: "flex", alignItems: "center", justifyContent: "center",
             position: "relative",
           }}>
             <div style={{
-              position: "absolute", inset: 3,
+              position: "absolute", inset: 4,
               border: "1px solid rgba(196,155,42,0.25)",
               borderRadius: "50%",
             }} />
-            <TreeIcon size={26} />
+            <TreeIcon size={34} />
           </div>
           <div>
             <div style={{
               fontFamily: "'Fjalla One', sans-serif",
-              fontSize: 22,
+              fontSize: 29,
               color: "#f4f1ea",
               textTransform: "uppercase",
               letterSpacing: "0.05em",
@@ -162,11 +162,11 @@ const Nav = ({ page, navigate }) => {
             }}>Tree Stand Partners</div>
             <div style={{
               fontFamily: "'Libre Baskerville', serif",
-              fontSize: 11,
+              fontSize: 14,
               fontStyle: "italic",
               color: "#c49b2a",
               letterSpacing: "0.06em",
-              marginTop: 4,
+              marginTop: 5,
             }}>See Farther From 20 Feet Up</div>
           </div>
         </div>
