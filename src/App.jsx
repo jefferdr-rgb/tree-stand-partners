@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 
 const PHONE = "(256) 710-5689";
@@ -305,6 +306,32 @@ const HomePage = ({ navigate }) => (
             ))}
           </div>
         </div>
+      </div>
+    </section>
+
+    {/* Trust Banner */}
+    <section style={{ background: "#ffffff", padding: "36px 24px", borderTop: "1px solid #e8e4da", borderBottom: "1px solid #e8e4da" }}>
+      <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 14 }}>
+          <div style={{
+            width: 40, height: 40, borderRadius: 10,
+            background: "#f4f1ea", border: "1px solid #d6d1c4",
+            display: "flex", alignItems: "center", justifyContent: "center",
+          }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2c3528" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+        </div>
+        <p style={{
+          fontFamily: "'Libre Baskerville', serif",
+          fontSize: "clamp(15px, 2.5vw, 18px)",
+          color: "#2c3528",
+          lineHeight: 1.8,
+        }}>
+          Your data stays yours. <span style={{ color: "#c49b2a", fontWeight: 700 }}>RHONDA</span> works inside your existing Google or Microsoft account. We never store, sell, or share your business information. <strong>Period.</strong>
+        </p>
       </div>
     </section>
 
