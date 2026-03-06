@@ -134,22 +134,47 @@ const Footer = ({ navigate }) => (
 const Nav = ({ page, navigate }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <nav style={{ background: "#2c3528", padding: "0 24px", position: "sticky", top: 0, zIndex: 100, borderBottom: "2px solid #c49b2a33" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 64 }}>
-        <div onClick={() => navigate("home")} style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer" }}>
-          <div style={{ width: 36, height: 36, border: "1.5px solid #5c6854", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <TreeIcon size={18} />
+    <nav style={{ background: "#2c3528", padding: "0 24px", position: "sticky", top: 0, zIndex: 100, borderBottom: "3px solid #c49b2a44" }}>
+      <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", height: 80 }}>
+        <div onClick={() => navigate("home")} style={{ display: "flex", alignItems: "center", gap: 14, cursor: "pointer" }}>
+          <div style={{
+            width: 52, height: 52,
+            border: "2px solid #5c6854",
+            borderRadius: "50%",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            position: "relative",
+          }}>
+            <div style={{
+              position: "absolute", inset: 3,
+              border: "1px solid rgba(196,155,42,0.25)",
+              borderRadius: "50%",
+            }} />
+            <TreeIcon size={26} />
           </div>
           <div>
-            <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 16, color: "#f4f1ea", textTransform: "uppercase", letterSpacing: "0.04em", lineHeight: 1 }}>Tree Stand Partners</div>
-            <div style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 8, fontStyle: "italic", color: "#c49b2a", letterSpacing: "0.04em", marginTop: 2 }}>See Farther From 20 Feet Up</div>
+            <div style={{
+              fontFamily: "'Fjalla One', sans-serif",
+              fontSize: 22,
+              color: "#f4f1ea",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em",
+              lineHeight: 1,
+            }}>Tree Stand Partners</div>
+            <div style={{
+              fontFamily: "'Libre Baskerville', serif",
+              fontSize: 11,
+              fontStyle: "italic",
+              color: "#c49b2a",
+              letterSpacing: "0.06em",
+              marginTop: 4,
+            }}>See Farther From 20 Feet Up</div>
           </div>
         </div>
         {/* Desktop nav */}
         <div style={{ display: "flex", gap: 28, alignItems: "center" }}>
           {["Home", "Services", "About", "Contact"].map(p => (
             <a key={p} onClick={() => navigate(p.toLowerCase())} style={{
-              fontSize: 11, fontFamily: "'Fjalla One', sans-serif", color: page === p.toLowerCase() ? "#c49b2a" : "#8a9b7a",
+              fontSize: 12, fontFamily: "'Fjalla One', sans-serif", color: page === p.toLowerCase() ? "#c49b2a" : "#8a9b7a",
               cursor: "pointer", textDecoration: "none", textTransform: "uppercase", letterSpacing: "0.1em",
               transition: "color 0.2s", borderBottom: page === p.toLowerCase() ? "2px solid #c49b2a" : "2px solid transparent", paddingBottom: 2,
             }}
@@ -157,8 +182,8 @@ const Nav = ({ page, navigate }) => {
             >{p}</a>
           ))}
           <button onClick={() => navigate("contact")} style={{
-            padding: "8px 18px", background: "transparent", border: "1.5px solid #c49b2a", borderRadius: 4,
-            fontFamily: "'Fjalla One', sans-serif", fontSize: 10, color: "#c49b2a", cursor: "pointer",
+            padding: "9px 20px", background: "transparent", border: "1.5px solid #c49b2a", borderRadius: 4,
+            fontFamily: "'Fjalla One', sans-serif", fontSize: 11, color: "#c49b2a", cursor: "pointer",
             letterSpacing: "0.1em", textTransform: "uppercase", transition: "all 0.2s",
           }}
           onMouseEnter={e => { e.target.style.background = "#c49b2a"; e.target.style.color = "#2c3528"; }}
@@ -194,12 +219,12 @@ const HomePage = ({ navigate }) => (
     </section>
 
     {/* Metrics */}
-    <section style={{ background: "#2c3528", padding: "28px 24px", borderTop: "1px solid #3a4a35" }}>
+    <section style={{ background: "#f4f1ea", padding: "32px 24px", borderBottom: "1px solid #d6d1c4" }}>
       <div style={{ maxWidth: 700, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, textAlign: "center" }}>
         {[{ val: "8–10", label: "Hours Saved Weekly" }, { val: "30s", label: "Average Task Time" }, { val: "$8.33", label: "Per Day Investment" }].map((m, i) => (
           <div key={i}>
             <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(26px, 4vw, 34px)", color: "#c49b2a" }}>{m.val}</div>
-            <div style={{ fontSize: 9, fontWeight: 700, color: "#6b7e6a", textTransform: "uppercase", letterSpacing: "0.12em", marginTop: 4 }}>{m.label}</div>
+            <div style={{ fontSize: 9, fontWeight: 700, color: "#8a9b7a", textTransform: "uppercase", letterSpacing: "0.12em", marginTop: 4 }}>{m.label}</div>
           </div>
         ))}
       </div>
@@ -232,7 +257,7 @@ const HomePage = ({ navigate }) => (
     </section>
 
     {/* How It Works */}
-    <section style={{ background: "#edeae2", padding: "60px 24px" }}>
+    <section style={{ background: "#ffffff", padding: "60px 24px", borderTop: "1px solid #e8e4da", borderBottom: "1px solid #e8e4da" }}>
       <div style={{ maxWidth: 800, margin: "0 auto" }}>
         <SectionHeader kicker="Three Steps to a Smarter Business">How It Works</SectionHeader>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 30 }}>
@@ -334,7 +359,7 @@ const ServicesPage = ({ navigate }) => (
       </div>
     </section>
 
-    <section style={{ background: "#edeae2", padding: "60px 24px" }}>
+    <section style={{ background: "#ffffff", padding: "60px 24px" }}>
       <div style={{ maxWidth: 680, margin: "0 auto" }}>
         <SectionHeader>Meet RHONDA</SectionHeader>
         <div style={{ fontSize: 15, color: "#5a6352", lineHeight: 1.9, textAlign: "center" }}>
@@ -366,7 +391,7 @@ const ServicesPage = ({ navigate }) => (
       </div>
     </section>
 
-    <section style={{ background: "#edeae2", padding: "60px 24px" }}>
+    <section style={{ background: "#ffffff", padding: "60px 24px" }}>
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
         <SectionHeader kicker="From Discovery to Launch">How Onboarding Works</SectionHeader>
         {[
@@ -417,7 +442,7 @@ const AboutPage = ({ navigate }) => (
       </div>
     </section>
 
-    <section style={{ background: "#edeae2", padding: "60px 24px" }}>
+    <section style={{ background: "#ffffff", padding: "60px 24px" }}>
       <div style={{ maxWidth: 700, margin: "0 auto" }}>
         <SectionHeader>Built in North Alabama, For North Alabama</SectionHeader>
         <p style={{ fontSize: 15, color: "#5a6352", lineHeight: 1.9, textAlign: "center", marginBottom: 40 }}>Tree Stand Partners is a North Alabama company serving local businesses. We understand the trades. We understand small business. We understand that technology is only useful if it actually saves you time and doesn't require a computer science degree to operate.</p>
