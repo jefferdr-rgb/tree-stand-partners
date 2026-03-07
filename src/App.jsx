@@ -503,6 +503,28 @@ const AboutPage = ({ navigate }) => (
 const ContactPage = ({ navigate }) => {
   const [form, setForm] = useState({ name: "", business: "", email: "", phone: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async () => {
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setError("Something went wrong. Please call or email us directly.");
+      }
+    } catch {
+      setError("Something went wrong. Please call or email us directly.");
+    }
+    setLoading(false);
+  };
 
   return (
     <div>
@@ -540,7 +562,10 @@ const ContactPage = ({ navigate }) => {
                     onFocus={e => e.target.style.borderColor = "#4a6540"} onBlur={e => e.target.style.borderColor = "#d6d1c4"}
                   />
                 </div>
-                <Button onClick={() => setSent(true)} style={{ alignSelf: "flex-start" }}>Send Message</Button>
+                {error && <div style={{ fontSize: 12, color: "#C53030", padding: "8px 12px", background: "rgba(197,48,48,0.08)", borderRadius: 6 }}>{error}</div>}
+                <Button onClick={handleSubmit} style={{ alignSelf: "flex-start", opacity: loading ? 0.6 : 1 }}>
+                  {loading ? "Sending..." : "Send Message"}
+                </Button>
               </div>
             ) : (
               <div style={{ background: "#fff", border: "1.5px solid #4a6540", borderRadius: 10, padding: "30px", textAlign: "center" }}>
