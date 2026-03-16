@@ -68,7 +68,7 @@ const DemoBanner = () => (
         lineHeight: 1.7,
         marginBottom: 6,
       }}>
-        Meet <span style={{ color: "#c49b2a", fontWeight: 700, fontSize: "1.1em" }}>RHONDA</span>, your next office manager.
+        Meet <span style={{ color: "#c49b2a", fontWeight: 700, fontSize: "1.1em" }}>RHONDA</span> — AI that works like your smartest team member.
       </p>
       <p style={{
         fontSize: "clamp(13px, 2.5vw, 15px)",
@@ -76,7 +76,7 @@ const DemoBanner = () => (
         lineHeight: 1.7,
         marginBottom: 24,
       }}>
-        She doesn't need coffee, never calls in sick, and works for $8.33 a day.
+        She auto-captures insights from your data, drafts responses in your voice, and never misses a signal. 24/7.
       </p>
       <a
         href="https://demo.treestandpartners.com"
@@ -205,15 +205,15 @@ const HomePage = ({ navigate }) => (
     <section style={{ background: "linear-gradient(170deg, #2c3528, #1e2a1c)", padding: "clamp(50px,8vw,80px) 24px", textAlign: "center", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: 0, left: "30%", right: "30%", height: 2, background: "linear-gradient(90deg, transparent, #c49b2a44, transparent)" }} />
       <div style={{ maxWidth: 640, margin: "0 auto", position: "relative" }}>
-        <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c49b2a", marginBottom: 16 }}>For Small Businesses & Trade Professionals</div>
+        <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.25em", textTransform: "uppercase", color: "#c49b2a", marginBottom: 16 }}>AI Business Intelligence For Small Business</div>
         <h1 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(28px, 5vw, 40px)", color: "#f4f1ea", textTransform: "uppercase", letterSpacing: "0.02em", lineHeight: 1.2, marginBottom: 20 }}>
           Your Business Deserves a Better <span style={{ color: "#c49b2a" }}>Vantage Point</span>
         </h1>
         <p style={{ fontSize: "clamp(14px, 2.5vw, 16px)", color: "#b0bca0", lineHeight: 1.8, marginBottom: 8 }}>
-          When you need help, just ask <Gold>RHONDA</Gold>, your new office manager. She handles the hard stuff, so you can work. She tracks jobs & invoices, writes emails like a pro, organizes your bills and receipts, summarizes contracts, tackles customer replies and anything else you dream up.
+          <Gold>RHONDA</Gold> runs the office. <Gold>LEO</Gold> runs the business. <Gold>VERA</Gold> runs the CEO. Three AI systems that auto-capture the signals buried in your emails, spreadsheets, and daily operations — then surface what actually needs your attention.
         </p>
         <p style={{ fontSize: "clamp(14px, 2.5vw, 16px)", color: "#b0bca0", lineHeight: 1.8, marginBottom: 32 }}>
-          <Gold>RHONDA</Gold> will have you singing a song, instead of doing jobs you <strong style={{ color: "#f4f1ea" }}>HATE!</strong>
+          Stop doing the work you <strong style={{ color: "#f4f1ea" }}>HATE</strong> — let AI handle it while you focus on growing your business.
         </p>
         <Button onClick={() => navigate("contact")}>Book Your Free Consultation</Button>
       </div>
@@ -222,7 +222,7 @@ const HomePage = ({ navigate }) => (
     {/* Metrics */}
     <section style={{ background: "#f4f1ea", padding: "32px 24px", borderBottom: "1px solid #d6d1c4" }}>
       <div style={{ maxWidth: 700, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, textAlign: "center" }}>
-        {[{ val: "8–10", label: "Hours Saved Weekly" }, { val: "30s", label: "Average Task Time" }, { val: "$8.33", label: "Per Day Investment" }].map((m, i) => (
+        {[{ val: "8–10", label: "Hours Saved Weekly" }, { val: "30s", label: "Average Task Time" }, { val: "24/7", label: "Always On" }].map((m, i) => (
           <div key={i}>
             <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(26px, 4vw, 34px)", color: "#c49b2a" }}>{m.val}</div>
             <div style={{ fontSize: 9, fontWeight: 700, color: "#8a9b7a", textTransform: "uppercase", letterSpacing: "0.12em", marginTop: 4 }}>{m.label}</div>
@@ -240,6 +240,8 @@ const HomePage = ({ navigate }) => (
         <SectionHeader kicker="Included With Every Dashboard">What Your Team Gets</SectionHeader>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 16 }}>
           {[
+            { icon: "📈", name: "LEO — Chief of Staff", desc: "Live business intelligence — pipeline, revenue, trends, and morning briefs" },
+            { icon: "📱", name: "VERA — Executive Assistant", desc: "SMS-first personal assistant for the CEO — calendar, email triage, and daily briefs" },
             { icon: "✉️", name: "Emails", desc: "Professional emails in your voice, written in seconds" },
             { icon: "📊", name: "Data & Reports", desc: "Organize jobs, invoices, and customer records" },
             { icon: "📄", name: "Documents", desc: "Contracts and specs summarized in plain English" },
@@ -277,35 +279,14 @@ const HomePage = ({ navigate }) => (
       </div>
     </section>
 
-    {/* Pricing */}
+    {/* CTA - Pricing removed, direct to consultation */}
     <section style={{ background: "#f4f1ea", padding: "60px 24px" }}>
-      <div style={{ maxWidth: 700, margin: "0 auto" }}>
-        <SectionHeader kicker="Simple, Honest Pricing">What It Costs</SectionHeader>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
-          <div style={{ background: "#fff", border: "1.5px solid #d6d1c4", borderRadius: 12, padding: "28px 26px", boxShadow: "0 2px 12px rgba(0,0,0,0.04)" }}>
-            <div style={{ fontSize: 9, fontWeight: 800, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8a9b7a", marginBottom: 4 }}>One-Time Investment</div>
-            <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12 }}>Setup & Launch</div>
-            <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 44, color: "#2c3528", lineHeight: 1, marginBottom: 4 }}>$500</div>
-            <div style={{ fontSize: 12, color: "#8a9b7a", fontWeight: 600, marginBottom: 18, paddingBottom: 18, borderBottom: "1px solid #e8e4da" }}>one-time fee</div>
-            {["Discovery call to learn your business", "Custom AI trained on your processes", "Branded dashboard — your name, your look", "Google or Microsoft integration", "Team training & onboarding", "30-day tuning period included"].map((f, i) => (
-              <div key={i} style={{ fontSize: 12, color: "#5a6352", padding: "6px 0", paddingLeft: 20, position: "relative", lineHeight: 1.4 }}>
-                <span style={{ position: "absolute", left: 0, color: "#c49b2a", fontWeight: 700 }}>▸</span>{f}
-              </div>
-            ))}
-          </div>
-          <div style={{ background: "#fff", border: "1.5px solid #4a6540", borderRadius: 12, padding: "28px 26px", boxShadow: "0 2px 12px rgba(0,0,0,0.04)", position: "relative" }}>
-            <div style={{ position: "absolute", top: -12, left: 24, background: "#2c3528", color: "#c49b2a", fontSize: 8, fontWeight: 800, letterSpacing: "0.15em", padding: "4px 14px", borderRadius: 3 }}>★ RECOMMENDED</div>
-            <div style={{ fontSize: 9, fontWeight: 800, letterSpacing: "0.2em", textTransform: "uppercase", color: "#8a9b7a", marginBottom: 4 }}>Monthly Retainer</div>
-            <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12 }}>AI Business Dashboard</div>
-            <div style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 44, color: "#3a5a2e", lineHeight: 1, marginBottom: 4 }}>$250</div>
-            <div style={{ fontSize: 12, color: "#8a9b7a", fontWeight: 600, marginBottom: 18, paddingBottom: 18, borderBottom: "1px solid #e8e4da" }}>/month</div>
-            {["Unlimited AI tasks for your whole team", "Email drafting in your company's voice", "Data organization & job tracking", "Contract & document summaries", "Calendar & scheduling management", "Ongoing updates & optimization"].map((f, i) => (
-              <div key={i} style={{ fontSize: 12, color: "#5a6352", padding: "6px 0", paddingLeft: 20, position: "relative", lineHeight: 1.4 }}>
-                <span style={{ position: "absolute", left: 0, color: "#c49b2a", fontWeight: 700 }}>▸</span>{f}
-              </div>
-            ))}
-          </div>
-        </div>
+      <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
+        <SectionHeader kicker="Tailored To Your Business">Custom Solutions, Custom Pricing</SectionHeader>
+        <p style={{ fontSize: 15, color: "#5a6352", lineHeight: 1.9, marginBottom: 28 }}>
+          Every business is different — so every solution we build is different. Book a free 15-minute call and we'll put together a package that fits your team, your tools, and your budget.
+        </p>
+        <Button onClick={() => navigate("contact")}>Book Your Free Consultation</Button>
       </div>
     </section>
 
@@ -330,7 +311,7 @@ const HomePage = ({ navigate }) => (
           color: "#2c3528",
           lineHeight: 1.8,
         }}>
-          Your data stays yours. <span style={{ color: "#c49b2a", fontWeight: 700 }}>RHONDA</span> works inside your existing Google or Microsoft account. We never store, sell, or share your business information. <strong>Period.</strong>
+          Your data stays yours. <span style={{ color: "#c49b2a", fontWeight: 700 }}>RHONDA</span>, <span style={{ color: "#c49b2a", fontWeight: 700 }}>LEO</span>, and <span style={{ color: "#c49b2a", fontWeight: 700 }}>VERA</span> work inside your existing accounts. We never store, sell, or share your business or personal information. <strong>Period.</strong>
         </p>
       </div>
     </section>
@@ -339,7 +320,7 @@ const HomePage = ({ navigate }) => (
     <section style={{ background: "linear-gradient(135deg, #2c3528, #1e2a1c)", padding: "50px 24px", textAlign: "center", position: "relative" }}>
       <div style={{ position: "absolute", top: 0, left: "25%", right: "25%", height: 2, background: "linear-gradient(90deg, transparent, #c49b2a, transparent)" }} />
       <h2 style={{ fontFamily: "'Libre Baskerville', serif", fontSize: "clamp(20px, 3.5vw, 26px)", color: "#f4f1ea", fontWeight: 700, marginBottom: 10 }}>Ready to see farther?</h2>
-      <p style={{ fontSize: 14, color: "#8a9b7a", marginBottom: 24 }}>Free 15-minute consultation. No pressure — just a conversation about what AI can do for your business.</p>
+      <p style={{ fontSize: 14, color: "#8a9b7a", marginBottom: 24 }}>Free 15-minute consultation. No pressure — just a conversation about what RHONDA, LEO, and VERA can do for your business.</p>
       <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
         <Button onClick={() => navigate("contact")}>Schedule Your Call</Button>
         <a
@@ -388,10 +369,11 @@ const ServicesPage = ({ navigate }) => (
 
     <section style={{ background: "#ffffff", padding: "60px 24px" }}>
       <div style={{ maxWidth: 680, margin: "0 auto" }}>
-        <SectionHeader>Meet RHONDA</SectionHeader>
+        <SectionHeader>Meet the Team</SectionHeader>
         <div style={{ fontSize: 15, color: "#5a6352", lineHeight: 1.9, textAlign: "center" }}>
-          <p><Gold>RHONDA</Gold> is your AI-powered office manager. She lives inside a custom dashboard branded to your company, and she already knows how your business works — your tone, your services, your customers.</p>
-          <p style={{ marginTop: 16 }}>She's not a generic chatbot. She's trained on YOUR business. When she writes an email, it sounds like you wrote it. When she organizes your data, she knows what a "job" means in your world. When she summarizes a contract, she flags the things that matter to your industry.</p>
+          <p><Gold>RHONDA</Gold> is your AI-powered staff tool — she lives inside a custom dashboard branded to your company and handles the daily work: emails, data, documents, customer replies, scheduling.</p>
+          <p style={{ marginTop: 16 }}><Gold>LEO</Gold> is your AI Chief of Staff — executive intelligence that reads your emails overnight, classifies what matters, and delivers a morning brief before you pour your coffee. Pipeline tracking, revenue trends, relationship monitoring — all automatic.</p>
+          <p style={{ marginTop: 16 }}><Gold>VERA</Gold> is your personal executive assistant — SMS-first, she texts you what matters today, manages your calendar across every device, filters your inbox, and knows the whole person: family commitments, travel preferences, VIP contacts. She works like a $3,000/month EA for a fraction of the cost.</p>
         </div>
       </div>
     </section>
@@ -440,7 +422,7 @@ const ServicesPage = ({ navigate }) => (
 
     <section style={{ background: "linear-gradient(135deg, #2c3528, #1e2a1c)", padding: "50px 24px", textAlign: "center" }}>
       <h2 style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 22, color: "#f4f1ea", fontWeight: 700, marginBottom: 10 }}>Let's talk about your business</h2>
-      <p style={{ fontSize: 14, color: "#8a9b7a", marginBottom: 24 }}>Every company is different. Book a free call and we'll figure out exactly how RHONDA can help yours.</p>
+      <p style={{ fontSize: 14, color: "#8a9b7a", marginBottom: 24 }}>Every company is different. Book a free call and we'll figure out exactly how RHONDA, LEO, and VERA can help yours.</p>
       <Button onClick={() => navigate("contact")}>Book Your Free Consultation</Button>
     </section>
   </div>
@@ -464,7 +446,7 @@ const AboutPage = ({ navigate }) => (
         <div style={{ fontSize: 15, color: "#5a6352", lineHeight: 2 }}>
           <p>If you've ever sat in a tree stand at dawn, you know the feeling. You're 20 feet up, the world is quiet, and suddenly you can see everything — trails you didn't know existed, movement you would have missed from the ground, the whole landscape laid out in front of you.</p>
           <p style={{ marginTop: 20 }}>That's what we do for businesses. We give you <strong style={{ color: "#2c3528" }}>elevation</strong>. A better view of your operations, your customers, and your time. We use AI tools to handle the ground-level work — the emails, the data entry, the paperwork — so you can focus on the big picture.</p>
-          <p style={{ marginTop: 20 }}>We're not a tech company that happens to work with businesses. We're a <strong style={{ color: "#2c3528" }}>business partner</strong> that happens to use technology. There's a difference.</p>
+          <p style={{ marginTop: 20 }}>We're not a tech company that happens to work with businesses. We're a <strong style={{ color: "#2c3528" }}>business intelligence partner</strong> that happens to use AI. There's a difference.</p>
         </div>
       </div>
     </section>
@@ -530,7 +512,7 @@ const ContactPage = ({ navigate }) => {
     <div>
       <section style={{ background: "linear-gradient(170deg, #2c3528, #1e2a1c)", padding: "60px 24px", textAlign: "center" }}>
         <h1 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(26px, 5vw, 36px)", color: "#f4f1ea", textTransform: "uppercase", marginBottom: 12 }}>Let's Have a Conversation</h1>
-        <p style={{ fontSize: 15, color: "#8a9b7a" }}>No pitch, no pressure. Just 15 minutes to see if RHONDA's a good fit for your business.</p>
+        <p style={{ fontSize: 15, color: "#8a9b7a" }}>No pitch, no pressure. Just 15 minutes to see if our AI tools are a good fit for your business.</p>
       </section>
 
       <section style={{ background: "#f4f1ea", padding: "60px 24px" }}>
@@ -600,7 +582,7 @@ const ContactPage = ({ navigate }) => {
 
             <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 15, color: "#2c3528", textTransform: "uppercase", marginBottom: 16 }}>Common Questions</h3>
             {[
-              { q: "How much does it cost?", a: "$500 one-time setup fee plus $250/month. No contracts — cancel anytime." },
+              { q: "How much does it cost?", a: "Every solution is custom — we'll walk through pricing on our first call. No contracts." },
               { q: "Do I need to be tech-savvy?", a: "Not at all. If you can type a sentence, you can use RHONDA." },
               { q: "How long does setup take?", a: "Most businesses are up and running within 2 weeks." },
               { q: "Can my whole team use it?", a: "Yes. One monthly price covers your whole company — no per-user fees." },
