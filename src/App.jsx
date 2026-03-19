@@ -826,7 +826,11 @@ const TermsPage = ({ navigate }) => (
 export default function App() {
   const getPageFromHash = () => {
     const hash = window.location.hash.replace("#/", "").replace("#", "");
-    return hash || "home";
+    if (hash) return hash;
+    // Support clean URLs (e.g. /privacy, /terms) via Vercel rewrites
+    const path = window.location.pathname.replace(/^\//, "");
+    const PATH_MAP = { "privacy": "privacy-policy", "privacy-policy": "privacy-policy", "terms": "terms", "products": "services", "contact": "contact" };
+    return PATH_MAP[path] || "home";
   };
 
   const [page, setPage] = useState(getPageFromHash);
