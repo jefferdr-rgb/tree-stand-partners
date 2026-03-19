@@ -824,9 +824,21 @@ const TermsPage = ({ navigate }) => (
 // APP ROOT
 // ═══════════════════════════════════════════
 export default function App() {
-  const [page, setPage] = useState("home");
+  const getPageFromHash = () => {
+    const hash = window.location.hash.replace("#/", "").replace("#", "");
+    return hash || "home";
+  };
+
+  const [page, setPage] = useState(getPageFromHash);
+
+  useEffect(() => {
+    const onHashChange = () => setPage(getPageFromHash());
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
 
   const navigate = (p) => {
+    window.location.hash = `#/${p}`;
     setPage(p);
     window.scrollTo(0, 0);
   };
