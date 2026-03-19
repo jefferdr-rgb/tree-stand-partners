@@ -124,6 +124,15 @@ const Footer = ({ navigate }) => (
         ))}
       </div>
       <div style={{ fontSize: 12, color: "#5c6854", marginBottom: 6 }}>{PHONE} · {EMAIL}</div>
+      <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 12 }}>
+        <a onClick={() => navigate("privacy-policy")} style={{ fontSize: 11, color: "#5c6854", cursor: "pointer", textDecoration: "none", letterSpacing: "0.04em" }}
+          onMouseEnter={e => e.target.style.color = "#c49b2a"} onMouseLeave={e => e.target.style.color = "#5c6854"}
+        >Privacy Policy</a>
+        <span style={{ color: "#3a4a35" }}>·</span>
+        <a onClick={() => navigate("terms")} style={{ fontSize: 11, color: "#5c6854", cursor: "pointer", textDecoration: "none", letterSpacing: "0.04em" }}
+          onMouseEnter={e => e.target.style.color = "#c49b2a"} onMouseLeave={e => e.target.style.color = "#5c6854"}
+        >Terms & Conditions</a>
+      </div>
       <div style={{ height: 1, background: "#3a4a35", margin: "16px auto", maxWidth: 200 }} />
       <div style={{ fontSize: 10, color: "#4a5a44", letterSpacing: "0.08em" }}>
         © 2026 Tree Stand Partners · North Alabama · <span style={{ color: "#8a7a3a" }}>See Farther From 20 Feet Up</span>
@@ -601,6 +610,217 @@ const ContactPage = ({ navigate }) => {
 };
 
 // ═══════════════════════════════════════════
+// PRIVACY POLICY PAGE
+// ═══════════════════════════════════════════
+const PrivacyPolicyPage = ({ navigate }) => (
+  <div>
+    <section style={{ background: "linear-gradient(170deg, #2c3528, #1e2a1c)", padding: "60px 24px", textAlign: "center" }}>
+      <div style={{ maxWidth: 600, margin: "0 auto" }}>
+        <h1 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(26px, 5vw, 36px)", color: "#f4f1ea", textTransform: "uppercase", marginBottom: 12 }}>Privacy Policy</h1>
+        <p style={{ fontSize: 15, color: "#8a9b7a" }}>Last updated: March 18, 2026</p>
+      </div>
+    </section>
+
+    <section style={{ background: "#f4f1ea", padding: "60px 24px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", fontSize: 14, color: "#5a6352", lineHeight: 1.9 }}>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 0 }}>Introduction</h3>
+        <p style={{ marginBottom: 24 }}>
+          Tree Stand Partners (operated by Atreides, LLC, "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, AI-powered business intelligence services (RHONDA, LEO, and VERA), and related communications including SMS notifications.
+        </p>
+        <p style={{ marginBottom: 24 }}>
+          By using our services, you agree to the collection and use of information in accordance with this policy. If you do not agree, please discontinue use of our services.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Information We Collect</h3>
+        <p style={{ marginBottom: 12 }}>We may collect the following personal information that you voluntarily provide to us:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Name</strong> — to identify you and personalize our services</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Email address</strong> — to communicate with you about our services</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Phone number</strong> — to provide SMS notifications and support</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Business name and information</strong> — to customize your AI tools</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Messages and content</strong> — information you provide through our contact form or services</li>
+        </ul>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>How We Use Your Information</h3>
+        <p style={{ marginBottom: 12 }}>We use the information we collect to:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}>Provide, operate, and maintain our AI business intelligence services (RHONDA, LEO, and VERA)</li>
+          <li style={{ marginBottom: 6 }}>Send SMS notifications and alerts related to your business operations</li>
+          <li style={{ marginBottom: 6 }}>Respond to your inquiries and provide customer support</li>
+          <li style={{ marginBottom: 6 }}>Customize and improve our services for your business</li>
+          <li style={{ marginBottom: 6 }}>Communicate with you about updates, features, and service-related matters</li>
+        </ul>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>SMS Communications</h3>
+        <p style={{ marginBottom: 12 }}>By providing your phone number and opting in to our SMS services, you consent to receive text messages from Tree Stand Partners related to our AI business intelligence services. Please note:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}>Message frequency varies based on your service configuration and business activity</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Message and data rates may apply</strong> — standard messaging fees from your wireless carrier may be charged</li>
+          <li style={{ marginBottom: 6 }}>To opt out of SMS messages at any time, reply <strong style={{ color: "#2c3528" }}>STOP</strong> to any message from us</li>
+          <li style={{ marginBottom: 6 }}>For help, reply <strong style={{ color: "#2c3528" }}>HELP</strong> or contact us at jefferdr@gmail.com</li>
+          <li style={{ marginBottom: 6 }}>SMS consent is not a condition of purchase — you can use our services without opting in to text messages</li>
+          <li style={{ marginBottom: 6 }}>We do not share your phone number or SMS consent with third parties for their marketing purposes</li>
+        </ul>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>We Do Not Sell Your Data</h3>
+        <p style={{ marginBottom: 24 }}>
+          We do not sell, rent, or trade your personal information to third parties. Period. Your business data stays yours.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Third-Party Services</h3>
+        <p style={{ marginBottom: 12 }}>We use the following third-party services to operate and deliver our products:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Twilio</strong> — for delivering SMS notifications and messages</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Vercel</strong> — for website and application hosting</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Supabase</strong> — for secure data storage</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Google Workspace APIs</strong> — to integrate with your existing business tools (only with your authorization)</li>
+        </ul>
+        <p style={{ marginBottom: 24 }}>
+          These providers have their own privacy policies governing the data they process. We only share the minimum information necessary for them to perform their services.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Cookies</h3>
+        <p style={{ marginBottom: 24 }}>
+          Our website may use cookies and similar tracking technologies to improve your browsing experience. Cookies are small data files stored on your device. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, some features of our site may not function properly without cookies.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Data Retention</h3>
+        <p style={{ marginBottom: 24 }}>
+          We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, or as required by law. When your data is no longer needed, we will securely delete or anonymize it. If you cancel your service, we will delete your business data within 30 days unless you request otherwise.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Your Rights</h3>
+        <p style={{ marginBottom: 12 }}>You have the right to:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}>Request access to the personal information we hold about you</li>
+          <li style={{ marginBottom: 6 }}>Request correction of inaccurate information</li>
+          <li style={{ marginBottom: 6 }}>Request deletion of your personal information</li>
+          <li style={{ marginBottom: 6 }}>Opt out of SMS communications at any time by replying STOP</li>
+          <li style={{ marginBottom: 6 }}>Withdraw consent for data processing where applicable</li>
+        </ul>
+        <p style={{ marginBottom: 24 }}>
+          To exercise any of these rights, please contact us at jefferdr@gmail.com.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Changes to This Policy</h3>
+        <p style={{ marginBottom: 24 }}>
+          We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this policy periodically.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Contact Us</h3>
+        <p style={{ marginBottom: 8 }}>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p style={{ marginBottom: 4 }}><strong style={{ color: "#2c3528" }}>Tree Stand Partners</strong> (operated by Atreides, LLC)</p>
+        <p style={{ marginBottom: 4 }}>2127 Hickory Hills Rd, Florence, AL 35630</p>
+        <p style={{ marginBottom: 4 }}>Email: jefferdr@gmail.com</p>
+        <p style={{ marginBottom: 24 }}>Phone: {PHONE}</p>
+
+      </div>
+    </section>
+  </div>
+);
+
+// ═══════════════════════════════════════════
+// TERMS AND CONDITIONS PAGE
+// ═══════════════════════════════════════════
+const TermsPage = ({ navigate }) => (
+  <div>
+    <section style={{ background: "linear-gradient(170deg, #2c3528, #1e2a1c)", padding: "60px 24px", textAlign: "center" }}>
+      <div style={{ maxWidth: 600, margin: "0 auto" }}>
+        <h1 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: "clamp(26px, 5vw, 36px)", color: "#f4f1ea", textTransform: "uppercase", marginBottom: 12 }}>Terms and Conditions</h1>
+        <p style={{ fontSize: 15, color: "#8a9b7a" }}>Last updated: March 18, 2026</p>
+      </div>
+    </section>
+
+    <section style={{ background: "#f4f1ea", padding: "60px 24px" }}>
+      <div style={{ maxWidth: 720, margin: "0 auto", fontSize: 14, color: "#5a6352", lineHeight: 1.9 }}>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 0 }}>Acceptance of Terms</h3>
+        <p style={{ marginBottom: 24 }}>
+          By accessing or using the services provided by Tree Stand Partners (operated by Atreides, LLC, "we," "us," or "our"), including our website, AI-powered business tools, and SMS communications, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Description of Services</h3>
+        <p style={{ marginBottom: 12 }}>
+          Tree Stand Partners provides AI-powered business intelligence tools designed for small businesses. Our services include:
+        </p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>RHONDA</strong> — an AI-powered staff tool that handles daily business operations including email drafting, data organization, document summaries, customer communication, and scheduling</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>LEO</strong> — an AI Chief of Staff providing executive intelligence, morning briefs, pipeline tracking, and revenue monitoring</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>VERA</strong> — an AI executive assistant providing SMS-based personal assistance including calendar management, inbox filtering, and daily briefings</li>
+        </ul>
+        <p style={{ marginBottom: 24 }}>
+          All services are customized to each client's specific business needs and delivered on a service engagement basis.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>SMS Terms and Conditions</h3>
+        <p style={{ marginBottom: 12 }}>
+          By opting in to receive SMS messages from Tree Stand Partners, you agree to the following:
+        </p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}>You consent to receive text messages related to your business operations, alerts, and service communications</li>
+          <li style={{ marginBottom: 6 }}>Message frequency varies based on your service configuration and business activity</li>
+          <li style={{ marginBottom: 6 }}><strong style={{ color: "#2c3528" }}>Message and data rates may apply</strong> — contact your wireless carrier for details about your messaging plan</li>
+          <li style={{ marginBottom: 6 }}>To opt out at any time, reply <strong style={{ color: "#2c3528" }}>STOP</strong> to any message. You will receive a confirmation message and no further texts will be sent</li>
+          <li style={{ marginBottom: 6 }}>For support, reply <strong style={{ color: "#2c3528" }}>HELP</strong> to any message, or contact us at jefferdr@gmail.com or {PHONE}</li>
+          <li style={{ marginBottom: 6 }}>SMS consent is not required as a condition of purchasing any goods or services</li>
+          <li style={{ marginBottom: 6 }}>Compatible carriers include but are not limited to AT&T, T-Mobile, Verizon, and Sprint. Service may not be available on all carriers</li>
+          <li style={{ marginBottom: 6 }}>We are not responsible for delayed or undelivered messages due to carrier issues or device limitations</li>
+        </ul>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>User Responsibilities</h3>
+        <p style={{ marginBottom: 12 }}>When using our services, you agree to:</p>
+        <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
+          <li style={{ marginBottom: 6 }}>Provide accurate and complete information</li>
+          <li style={{ marginBottom: 6 }}>Use the services only for lawful purposes</li>
+          <li style={{ marginBottom: 6 }}>Not attempt to reverse-engineer, copy, or redistribute our AI tools</li>
+          <li style={{ marginBottom: 6 }}>Keep your account credentials secure</li>
+          <li style={{ marginBottom: 6 }}>Notify us promptly of any unauthorized use of your account</li>
+        </ul>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Intellectual Property</h3>
+        <p style={{ marginBottom: 24 }}>
+          All content, features, and functionality of our services — including the RHONDA, LEO, and VERA platforms, their underlying technology, design, and branding — are owned by Tree Stand Partners (Atreides, LLC) and are protected by intellectual property laws. Your use of our services does not grant you ownership of any intellectual property rights in our tools or technology. Your business data remains your property at all times.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Limitation of Liability</h3>
+        <p style={{ marginBottom: 24 }}>
+          To the fullest extent permitted by law, Tree Stand Partners (Atreides, LLC) shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services. Our AI tools provide business intelligence and assistance, but all business decisions remain your responsibility. Our total liability for any claim arising from your use of our services shall not exceed the amount you paid us in the twelve (12) months preceding the claim.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Disclaimer of Warranties</h3>
+        <p style={{ marginBottom: 24 }}>
+          Our services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not guarantee that our services will be uninterrupted, error-free, or that AI-generated content will be accurate in all cases. While we strive for reliability, AI tools may occasionally produce incorrect or incomplete results.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Termination</h3>
+        <p style={{ marginBottom: 24 }}>
+          Either party may terminate the service relationship at any time. We do not require long-term contracts. Upon termination, we will delete your business data within 30 days unless you request a copy or an extension. We reserve the right to suspend or terminate access to our services if these terms are violated.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Governing Law</h3>
+        <p style={{ marginBottom: 24 }}>
+          These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of Alabama, without regard to its conflict of law provisions. Any disputes arising from these terms or your use of our services shall be resolved in the courts located in Lauderdale County, Alabama.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Changes to These Terms</h3>
+        <p style={{ marginBottom: 24 }}>
+          We reserve the right to modify these Terms and Conditions at any time. When we make changes, we will update the "Last updated" date at the top of this page. Continued use of our services after changes are posted constitutes acceptance of the revised terms.
+        </p>
+
+        <h3 style={{ fontFamily: "'Fjalla One', sans-serif", fontSize: 18, color: "#2c3528", textTransform: "uppercase", marginBottom: 12, marginTop: 32 }}>Contact Us</h3>
+        <p style={{ marginBottom: 8 }}>If you have any questions about these Terms and Conditions, please contact us:</p>
+        <p style={{ marginBottom: 4 }}><strong style={{ color: "#2c3528" }}>Tree Stand Partners</strong> (operated by Atreides, LLC)</p>
+        <p style={{ marginBottom: 4 }}>2127 Hickory Hills Rd, Florence, AL 35630</p>
+        <p style={{ marginBottom: 4 }}>Email: jefferdr@gmail.com</p>
+        <p style={{ marginBottom: 24 }}>Phone: {PHONE}</p>
+
+      </div>
+    </section>
+  </div>
+);
+
+// ═══════════════════════════════════════════
 // APP ROOT
 // ═══════════════════════════════════════════
 export default function App() {
@@ -619,6 +839,8 @@ export default function App() {
       {page === "services" && <ServicesPage navigate={navigate} />}
       {page === "about" && <AboutPage navigate={navigate} />}
       {page === "contact" && <ContactPage navigate={navigate} />}
+      {page === "privacy-policy" && <PrivacyPolicyPage navigate={navigate} />}
+      {page === "terms" && <TermsPage navigate={navigate} />}
       <Footer navigate={navigate} />
     </div>
   );
