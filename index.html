@@ -1,18 +1,565 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tree Stand Partners | AI-Powered Business Tools | North Alabama</title>
-    <meta name="description" content="Tree Stand Partners builds custom AI-powered business tools for small businesses in North Alabama. Save 8-10 hours per week with Rhonda, your AI office manager." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23c49b2a' stroke-width='2'%3E%3Cline x1='16' y1='6' x2='16' y2='26'/%3E%3Cpolyline points='10,17 16,10 22,17'/%3E%3Cpolyline points='12,22 16,17 20,22'/%3E%3Cline x1='11' y1='26' x2='21' y2='26'/%3E%3C/svg%3E" />
-    <style>
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body { background: #f4f1ea; }
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tree Stand Partners | The Digital Architect</title>
+<meta name="description" content="Tree Stand Partners builds AI-powered business intelligence for the mid-market. RHONDA, LEO, and VERA — your operations run themselves." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23c49b2a' stroke-width='2'%3E%3Cline x1='16' y1='6' x2='16' y2='26'/%3E%3Cpolyline points='10,17 16,10 22,17'/%3E%3Cpolyline points='12,22 16,17 20,22'/%3E%3Cline x1='11' y1='26' x2='21' y2='26'/%3E%3C/svg%3E" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#1d2f23",
+              "tertiary-fixed-dim": "#b7ccba",
+              "primary-fixed": "#d0e9d4",
+              "primary": "#061b0e",
+              "on-secondary": "#ffffff",
+              "primary-container": "#1b3022",
+              "on-surface-variant": "#434843",
+              "on-error-container": "#93000a",
+              "secondary": "#775a00",
+              "on-tertiary-fixed": "#0e1f14",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#b4cdb8",
+              "on-secondary-fixed": "#251a00",
+              "tertiary-fixed": "#d3e8d5",
+              "on-primary-fixed-variant": "#364c3c",
+              "on-error": "#ffffff",
+              "surface-dim": "#dcdad5",
+              "surface-variant": "#e5e2dd",
+              "background": "#fcf9f4",
+              "on-secondary-fixed-variant": "#5a4400",
+              "on-tertiary-fixed-variant": "#394b3d",
+              "on-primary-fixed": "#0b2013",
+              "on-tertiary": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#fcf9f4",
+              "tertiary": "#091a0f",
+              "surface-bright": "#fcf9f4",
+              "inverse-surface": "#31302d",
+              "on-surface": "#1c1c19",
+              "on-background": "#1c1c19",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdf97",
+              "surface-tint": "#4d6453",
+              "outline-variant": "#c3c8c1",
+              "error": "#ba1a1a",
+              "inverse-primary": "#b4cdb8",
+              "surface-container-low": "#f6f3ee",
+              "secondary-container": "#fdcf5a",
+              "outline": "#737973",
+              "surface-container": "#f0ede8",
+              "secondary-fixed-dim": "#eec14e",
+              "surface-container-highest": "#e5e2dd",
+              "on-secondary-container": "#735700",
+              "surface-container-high": "#ebe8e3",
+              "inverse-on-surface": "#f3f0eb",
+              "on-primary-container": "#819986",
+              "on-tertiary-container": "#839787"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .page-section { display: none; }
+      .page-section.active { display: block; }
     </style>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#061b0e]/80 backdrop-blur-md transition-all duration-300">
+<div class="flex justify-between items-center px-12 py-6 w-full max-w-none">
+<a href="#/" class="text-2xl font-black text-[#061b0e] dark:text-[#fcf9f4] uppercase tracking-tighter font-['Newsreader'] no-underline">TSP</a>
+<div class="hidden md:flex space-x-12">
+<a class="text-[#061b0e] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300 font-['Newsreader'] font-bold tracking-tight" href="#/">Home</a>
+<a class="text-[#061b0e] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300 font-['Newsreader'] font-bold tracking-tight" href="#/products">Products</a>
+<a class="text-[#061b0e] dark:text-[#fcf9f4] opacity-80 hover:opacity-100 transition-opacity duration-300 font-['Newsreader'] font-bold tracking-tight" href="#/contact">Contact</a>
+</div>
+<a href="#/contact" class="bg-primary text-on-primary px-8 py-3 text-sm font-label uppercase tracking-widest active:scale-95 duration-100 ease-in-out no-underline">
+            Book a Consultation
+        </a>
+</div>
+</nav>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- MAIN / HOME PAGE -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-home" class="page-section active">
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-12 py-24 md:py-40 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-8">
+<h1 class="font-headline text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tighter text-primary">
+                Your Operations Run Themselves. Your Data Talks to You.
+            </h1>
+<p class="mt-12 text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl leading-relaxed">
+                AI-powered business intelligence for the mid-market. We don't sell software subscriptions. We build the architecture for your future.
+            </p>
+</div>
+<div class="md:col-span-4 flex flex-col items-start md:items-end">
+<div class="w-full aspect-[4/5] bg-surface-container-low overflow-hidden">
+<img alt="Tree Stand Partners architectural tree logo" class="w-full h-full object-cover transition-all duration-700 opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1YLlzF4cNYQEx0f91PEzEy9nk2Z-DklHIWE7sR8kRM2Nx75Jev--3WLbl-VOeVKxAgDeOmg6fmx6LCNqsSAJeKUDrwqFCWnYJqAdcPptLJ-odAh9RGjZwdejUm-pUzwGZlG0VGEjw3IpQWGwgBMpZUyaungE6-DtagnsAoXJ32L2k4qw7bNth_2Nlvksl3GOLD70e3-P--rL7EljtNp1ts-iw9ivbbmazfjUUBVXy16UJnmVc4dMdPyw7CTNEIGU8FLrCxjbTle5V"/>
+</div>
+</div>
+</section>
+<!-- Who We Serve -->
+<section class="py-12 border-y border-outline-variant overflow-hidden">
+<div class="px-12 mb-8">
+<h3 class="text-xs font-label uppercase tracking-[0.3em] text-on-surface-variant">Industries We Serve</h3>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar px-12 space-x-16 pb-4">
+<div class="flex items-center space-x-4 flex-shrink-0">
+<span class="material-symbols-outlined text-secondary opacity-60">factory</span>
+<span class="font-headline text-2xl text-primary">Manufacturing</span>
+</div>
+<div class="flex items-center space-x-4 flex-shrink-0">
+<span class="material-symbols-outlined text-secondary opacity-60">local_shipping</span>
+<span class="font-headline text-2xl text-primary">Distribution</span>
+</div>
+<div class="flex items-center space-x-4 flex-shrink-0">
+<span class="material-symbols-outlined text-secondary opacity-60">account_balance</span>
+<span class="font-headline text-2xl text-primary">Financial Services</span>
+</div>
+<div class="flex items-center space-x-4 flex-shrink-0">
+<span class="material-symbols-outlined text-secondary opacity-60">medical_services</span>
+<span class="font-headline text-2xl text-primary">Healthcare</span>
+</div>
+<div class="flex items-center space-x-4 flex-shrink-0">
+<span class="material-symbols-outlined text-secondary opacity-60">work</span>
+<span class="font-headline text-2xl text-primary">Professional Services</span>
+</div>
+</div>
+</section>
+<!-- Section 1: The Architecture Gap -->
+<section class="bg-primary-container py-32 px-12 text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-1">
+<div class="w-1 h-32 bg-secondary"></div>
+</div>
+<div class="md:col-span-5">
+<h2 class="font-headline text-5xl md:text-6xl tracking-tight leading-none">
+                    The Architecture Gap.
+                </h2>
+</div>
+<div class="md:col-span-6 space-y-8">
+<p class="text-xl md:text-2xl font-body leading-relaxed opacity-90">
+                    Most AI pilots fail not because of the technology, but because of the foundation. They are digital band-aids on fractured processes.
+                </p>
+<p class="text-lg font-body leading-relaxed opacity-70">
+                    Tree Stand Partners operates differently. We are advisors first, architects second, and implementers third. We bridge the gap between legacy operations and autonomous intelligence by rebuilding your business architecture from the ground up.
+                </p>
+<div class="pt-8">
+<a class="text-secondary font-label uppercase tracking-widest border-b border-secondary pb-2 hover:opacity-80 transition-opacity inline-flex items-center gap-2" href="#/products">
+                        Our Methodology <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Our Products -->
+<section class="bg-surface py-32 px-12">
+<div class="mb-24">
+<h3 class="font-headline text-4xl tracking-tight text-primary">Core Intelligence Modules</h3>
+</div>
+<div class="space-y-32">
+<!-- RHONDA -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5">
+<div class="aspect-square bg-surface-container-high p-12 flex flex-col justify-between">
+<span class="text-xs font-label uppercase tracking-[0.3em] text-on-surface-variant">Module 01</span>
+<h4 class="font-headline text-7xl text-primary">RHONDA</h4>
+<div class="w-16 h-1 bg-secondary"></div>
+</div>
+</div>
+<div class="md:col-span-7">
+<div class="max-w-xl">
+<h5 class="text-sm font-label uppercase tracking-widest text-secondary mb-6">The AI Office Manager</h5>
+<p class="text-2xl font-body text-primary leading-tight mb-8">
+                            Optimizes workflows and manages administrative operations for the entire staff.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed">
+                            Rhonda isn't just a scheduler. She is an operational heartbeat, identifying bottlenecks in real-time and autonomously re-routing tasks to ensure maximum throughput without manual intervention.
+                        </p>
+</div>
+</div>
+</div>
+<!-- LEO -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 order-2 md:order-1 flex justify-end">
+<div class="max-w-xl text-left md:text-right">
+<h5 class="text-sm font-label uppercase tracking-widest text-secondary mb-6">The AI Executive Advisor</h5>
+<p class="text-2xl font-body text-primary leading-tight mb-8">
+                            Strategic insights and data-driven guidance for CEOs.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed">
+                            Leo synthesizes internal performance metrics with global market trends to provide predictive modeling. It translates complex data into clear, actionable mandates for executive leadership.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-5 order-1 md:order-2">
+<div class="aspect-square bg-primary-container p-12 flex flex-col justify-between">
+<span class="text-xs font-label uppercase tracking-[0.3em] text-on-primary-container">Module 02</span>
+<h4 class="font-headline text-7xl text-on-primary">LEO</h4>
+<div class="w-16 h-1 bg-secondary"></div>
+</div>
+</div>
+</div>
+<!-- VERA -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5">
+<div class="aspect-square p-12 flex flex-col justify-between bg-[#c49b2a]">
+<span class="text-xs font-label uppercase tracking-[0.3em] text-white/80">Module 03</span>
+<h4 class="font-headline text-7xl text-white">VERA</h4>
+<div class="w-16 h-1 bg-white"></div>
+</div>
+</div>
+<div class="md:col-span-7">
+<div class="max-w-xl">
+<h5 class="text-sm font-label uppercase tracking-widest text-secondary mb-6">The AI Executive Assistant</h5>
+<p class="text-2xl font-body text-primary leading-tight mb-8">
+                            Personalized support for high-level management.
+                        </p>
+<p class="text-on-surface-variant leading-relaxed">
+                            Vera masters the nuance of executive communication and priority management. She acts as a cognitive extension of the leader, handling high-stakes logistics and information triaging with unparalleled precision.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dramatic Testimonial Section -->
+<section class="bg-primary py-32 px-12 text-on-primary">
+<div class="max-w-6xl mx-auto relative">
+<div class="text-secondary opacity-20 absolute -top-20 -left-12 select-none font-headline text-[20rem] leading-none">"</div>
+<div class="relative z-10 space-y-12">
+<blockquote class="font-headline italic text-4xl md:text-6xl lg:text-7xl leading-tight tracking-tight text-on-primary/90">
+                    "We spent $200K on AI consultants who gave us dashboards nobody opened. Tree Stand Partners gave us an architecture that runs itself."
+                </blockquote>
+<div class="flex items-center gap-6">
+<div class="h-px w-12 bg-secondary"></div>
+<div class="font-label uppercase tracking-widest text-secondary">Chief Executive Officer</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Animated Counter Section -->
+<section class="bg-surface-container-high py-32 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div class="p-8 border-l border-outline-variant flex flex-col items-start">
+<div class="text-5xl font-headline text-primary mb-2 flex items-baseline">
+<span class="counter">15</span>+
+                    </div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary mb-4">Hours saved per week</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Automated operational cycles previously requiring manual oversight.</p>
+</div>
+<div class="p-8 border-l border-outline-variant flex flex-col items-start">
+<div class="text-5xl font-headline text-primary mb-2 flex items-baseline">
+<span class="counter">95</span>%
+                    </div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary mb-4">Pilot Success Rate</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Unrivaled conversion from technical proof to organizational adoption.</p>
+</div>
+<div class="p-8 border-l border-outline-variant flex flex-col items-start">
+<div class="text-5xl font-headline text-primary mb-2 flex items-baseline">
+<span class="counter">45</span>-Day
+                    </div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary mb-4">Deployment</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Rapid architectural hardening without business disruption.</p>
+</div>
+<div class="p-8 border-l border-outline-variant flex flex-col items-start">
+<div class="text-5xl font-headline text-primary mb-2 flex items-baseline">
+                        $<span class="counter">0</span>
+</div>
+<div class="text-xs font-label uppercase tracking-widest text-secondary mb-4">Licensing Fees</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">No recurring seat costs. You own your proprietary intelligence system.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dramatic Split-Screen CTA -->
+<section class="flex flex-col md:flex-row min-h-[700px]">
+<div class="md:w-1/2 bg-primary p-12 md:p-24 flex flex-col justify-center">
+<div class="max-w-md">
+<h2 class="font-headline text-5xl md:text-7xl text-on-primary leading-none tracking-tight mb-8">
+                    Is your business structured for AI to work inside it?
+                </h2>
+<div class="w-16 h-1 bg-secondary mb-8"></div>
+<p class="text-on-primary/60 text-lg font-body leading-relaxed">
+                    Most organizations aren't. We help you rebuild the foundations so your company can scale into the age of autonomy.
+                </p>
+</div>
+</div>
+<div class="md:w-1/2 bg-[#fcf9f4] p-12 md:p-24 flex flex-col justify-center">
+<div class="max-w-md w-full">
+<h3 class="text-xs font-label uppercase tracking-widest text-secondary mb-12">Request Architecture Audit</h3>
+<form class="space-y-8" onsubmit="event.preventDefault()">
+<div class="group border-b border-outline focus-within:border-secondary transition-colors duration-300">
+<label class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Full Name</label>
+<input class="w-full bg-transparent border-none p-0 pb-2 text-primary focus:ring-0 placeholder:text-on-surface/20 font-body" placeholder="Johnathan Miller" type="text"/>
+</div>
+<div class="group border-b border-outline focus-within:border-secondary transition-colors duration-300">
+<label class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Business Email</label>
+<input class="w-full bg-transparent border-none p-0 pb-2 text-primary focus:ring-0 placeholder:text-on-surface/20 font-body" placeholder="jmiller@enterprise.com" type="email"/>
+</div>
+<div class="group border-b border-outline focus-within:border-secondary transition-colors duration-300">
+<label class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Company</label>
+<input class="w-full bg-transparent border-none p-0 pb-2 text-primary focus:ring-0 placeholder:text-on-surface/20 font-body" placeholder="Global Logistics Inc." type="text"/>
+</div>
+<div class="group border-b border-outline focus-within:border-secondary transition-colors duration-300">
+<label class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Annual Revenue Range</label>
+<select class="w-full bg-transparent border-none p-0 pb-2 text-primary focus:ring-0 appearance-none font-body">
+<option>$5M - $25M</option>
+<option>$25M - $100M</option>
+<option>$100M - $500M</option>
+<option>$500M+</option>
+</select>
+</div>
+<div class="pt-8">
+<button class="w-full bg-primary text-on-primary py-5 font-label uppercase tracking-[0.2em] text-sm hover:bg-secondary transition-colors duration-500 active:scale-[0.98]">
+                            Submit Consultation Request
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- PRIVACY POLICY PAGE -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-privacy-policy" class="page-section">
+<main class="pt-24">
+<section class="px-12 py-24 md:py-32">
+<div class="max-w-3xl mx-auto">
+<h1 class="font-headline text-5xl md:text-7xl tracking-tighter text-primary mb-4">Privacy Policy</h1>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-16">Last updated: March 18, 2026</p>
+
+<div class="space-y-12 text-on-surface-variant leading-relaxed">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Introduction</h3>
+<p>Tree Stand Partners (operated by Atreides, LLC, "we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website, AI-powered business intelligence services (RHONDA, LEO, and VERA), and related communications including SMS notifications.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Information We Collect</h3>
+<p class="mb-4">We may collect the following personal information that you voluntarily provide to us:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li><strong class="text-primary">Name</strong> — to identify you and personalize our services</li>
+<li><strong class="text-primary">Email address</strong> — to communicate with you about our services</li>
+<li><strong class="text-primary">Phone number</strong> — to provide SMS notifications and support</li>
+<li><strong class="text-primary">Business name and information</strong> — to customize your AI tools</li>
+<li><strong class="text-primary">Messages and content</strong> — information you provide through our contact form or services</li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">How We Use Your Information</h3>
+<ul class="list-disc pl-6 space-y-2">
+<li>Provide, operate, and maintain our AI business intelligence services (RHONDA, LEO, and VERA)</li>
+<li>Send SMS notifications and alerts related to your business operations</li>
+<li>Respond to your inquiries and provide customer support</li>
+<li>Customize and improve our services for your business</li>
+<li>Communicate with you about updates, features, and service-related matters</li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">SMS Communications</h3>
+<p class="mb-4">By providing your phone number and opting in to our SMS services, you consent to receive text messages from Tree Stand Partners related to our AI business intelligence services. Please note:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Message frequency varies based on your service configuration and business activity</li>
+<li><strong class="text-primary">Message and data rates may apply</strong> — standard messaging fees from your wireless carrier may be charged</li>
+<li>To opt out of SMS messages at any time, reply <strong class="text-primary">STOP</strong> to any message from us</li>
+<li>For help, reply <strong class="text-primary">HELP</strong> or contact us at jefferdr@gmail.com</li>
+<li>SMS consent is not a condition of purchase — you can use our services without opting in to text messages</li>
+<li>We do not share your phone number or SMS consent with third parties for their marketing purposes</li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">We Do Not Sell Your Data</h3>
+<p>We do not sell, rent, or trade your personal information to third parties. Period. Your business data stays yours.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Third-Party Services</h3>
+<p class="mb-4">We use the following third-party services to operate and deliver our products:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li><strong class="text-primary">Twilio</strong> — for delivering SMS notifications and messages</li>
+<li><strong class="text-primary">Vercel</strong> — for website and application hosting</li>
+<li><strong class="text-primary">Supabase</strong> — for secure data storage</li>
+<li><strong class="text-primary">Google Workspace APIs</strong> — to integrate with your existing business tools (only with your authorization)</li>
+</ul>
+<p class="mt-4">These providers have their own privacy policies governing the data they process. We only share the minimum information necessary for them to perform their services.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Data Retention</h3>
+<p>We retain your personal information only for as long as necessary to fulfill the purposes described in this policy, or as required by law. If you cancel your service, we will delete your business data within 30 days unless you request otherwise.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Your Rights</h3>
+<ul class="list-disc pl-6 space-y-2">
+<li>Request access to the personal information we hold about you</li>
+<li>Request correction of inaccurate information</li>
+<li>Request deletion of your personal information</li>
+<li>Opt out of SMS communications at any time by replying STOP</li>
+<li>Withdraw consent for data processing where applicable</li>
+</ul>
+<p class="mt-4">To exercise any of these rights, please contact us at jefferdr@gmail.com.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Contact Us</h3>
+<p><strong class="text-primary">Tree Stand Partners</strong> (operated by Atreides, LLC)</p>
+<p>2127 Hickory Hills Rd, Florence, AL 35630</p>
+<p>Email: jefferdr@gmail.com</p>
+<p>Phone: (256) 710-5689</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<!-- ═══════════════════════════════════════ -->
+<!-- TERMS PAGE -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-terms" class="page-section">
+<main class="pt-24">
+<section class="px-12 py-24 md:py-32">
+<div class="max-w-3xl mx-auto">
+<h1 class="font-headline text-5xl md:text-7xl tracking-tighter text-primary mb-4">Terms and Conditions</h1>
+<p class="text-on-surface-variant font-label text-sm uppercase tracking-widest mb-16">Last updated: March 18, 2026</p>
+
+<div class="space-y-12 text-on-surface-variant leading-relaxed">
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Acceptance of Terms</h3>
+<p>By accessing or using the services provided by Tree Stand Partners (operated by Atreides, LLC), including our website, AI-powered business tools, and SMS communications, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Description of Services</h3>
+<p class="mb-4">Tree Stand Partners provides AI-powered business intelligence tools designed for small and mid-market businesses. Our services include:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li><strong class="text-primary">RHONDA</strong> — an AI-powered office manager that handles daily business operations including workflow optimization, data organization, and administrative automation</li>
+<li><strong class="text-primary">LEO</strong> — an AI executive advisor providing strategic insights, predictive modeling, and data-driven guidance for leadership</li>
+<li><strong class="text-primary">VERA</strong> — an AI executive assistant providing SMS-based personal assistance including calendar management, inbox filtering, and daily briefings</li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">SMS Terms and Conditions</h3>
+<p class="mb-4">By opting in to receive SMS messages from Tree Stand Partners, you agree to the following:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>You consent to receive text messages related to your business operations, alerts, and service communications</li>
+<li>Message frequency varies based on your service configuration and business activity</li>
+<li><strong class="text-primary">Message and data rates may apply</strong> — contact your wireless carrier for details about your messaging plan</li>
+<li>To opt out at any time, reply <strong class="text-primary">STOP</strong> to any message</li>
+<li>For support, reply <strong class="text-primary">HELP</strong> to any message, or contact us at jefferdr@gmail.com or (256) 710-5689</li>
+<li>SMS consent is not required as a condition of purchasing any goods or services</li>
+<li>Compatible carriers include but are not limited to AT&T, T-Mobile, Verizon, and Sprint</li>
+</ul>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Intellectual Property</h3>
+<p>All content, features, and functionality of our services — including the RHONDA, LEO, and VERA platforms, their underlying technology, design, and branding — are owned by Tree Stand Partners (Atreides, LLC) and are protected by intellectual property laws. Your business data remains your property at all times.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Limitation of Liability</h3>
+<p>To the fullest extent permitted by law, Tree Stand Partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of our services. Our AI tools provide business intelligence and assistance, but all business decisions remain your responsibility.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Termination</h3>
+<p>Either party may terminate the service relationship at any time. We do not require long-term contracts. Upon termination, we will delete your business data within 30 days unless you request a copy or extension.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Governing Law</h3>
+<p>These Terms shall be governed by and construed in accordance with the laws of the State of Alabama. Any disputes shall be resolved in the courts located in Lauderdale County, Alabama.</p>
+</div>
+
+<div>
+<h3 class="font-headline text-2xl text-primary mb-4">Contact Us</h3>
+<p><strong class="text-primary">Tree Stand Partners</strong> (operated by Atreides, LLC)</p>
+<p>2127 Hickory Hills Rd, Florence, AL 35630</p>
+<p>Email: jefferdr@gmail.com</p>
+<p>Phone: (256) 710-5689</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+
+<!-- Footer -->
+<footer class="w-full bg-[#061b0e] dark:bg-[#000000] text-[#fcf9f4] font-['Manrope'] text-sm tracking-wide uppercase">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full">
+<div class="flex flex-col md:items-start items-center mb-12 md:mb-0">
+<div class="text-[#775a00] font-bold text-xl mb-4 font-['Newsreader'] tracking-tighter uppercase">Tree Stand Partners</div>
+<div class="opacity-40 normal-case font-body text-xs tracking-normal">Built in North Alabama. Deployed Everywhere.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-6">
+<a class="text-[#fcf9f4]/60 hover:text-[#775a00] transition-colors duration-300" href="#/">Home</a>
+<a class="text-[#fcf9f4]/60 hover:text-[#775a00] transition-colors duration-300" href="#/products">Products</a>
+<a class="text-[#fcf9f4]/60 hover:text-[#775a00] transition-colors duration-300" href="#/privacy-policy">Privacy Policy</a>
+<a class="text-[#fcf9f4]/60 hover:text-[#775a00] transition-colors duration-300" href="#/terms">Terms</a>
+<a class="text-[#fcf9f4]/60 hover:text-[#775a00] transition-colors duration-300" href="#/contact">Contact</a>
+</div>
+<div class="mt-12 md:mt-0 opacity-40 text-[10px]">
+            &copy; 2026 Tree Stand Partners
+        </div>
+</div>
+</footer>
+
+<!-- Hash Router -->
+<script>
+function router() {
+  var hash = window.location.hash.replace('#/', '').replace('#', '') || 'home';
+  var pages = document.querySelectorAll('.page-section');
+  pages.forEach(function(p) { p.classList.remove('active'); });
+  var target = document.getElementById('page-' + hash);
+  if (target) {
+    target.classList.add('active');
+  } else {
+    document.getElementById('page-home').classList.add('active');
+  }
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', router);
+window.addEventListener('DOMContentLoaded', router);
+</script>
+</body></html>
